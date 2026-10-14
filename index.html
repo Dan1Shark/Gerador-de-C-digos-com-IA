@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Código com IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Cabeçalho do Projeto -->
+    <header>
+        <h1>Meu Gerador de Código com IA 🤖</h1>
+    </header>
+
+    <!-- Área Principal Dividida -->
+    <main class="container">
+        
+        <!-- Painel Esquerdo: Entrada do Pedido -->
+        <section class="painel-controle">
+            <h2>O que você quer criar?</h2>
+            <textarea id="prompt-input" placeholder="Ex: Crie uma bola verde quicando..."></textarea>
+            <button id="gerar-btn">Gerar Código</button>
+        </section>
+
+        <!-- Painel Direito: Onde o resultado vai aparecer -->
+        <section class="painel-resultado">
+            
+            <!-- Sub-painel: O código gerado -->
+            <div class="bloco-codigo">
+                <h3>Código Gerado:</h3>
+                <pre><code id="codigo-saida">// O código da IA aparecerá aqui...</code></pre>
+            </div>
+
+            <!-- Sub-painel: A pré-visualização (Preview) -->
+            <div class="bloco-preview">
+                <h3>Resultado ao Vivo:</h3>
+                <!-- O iframe é como se fosse uma "minitelinha" isolada para rodar o HTML/CSS/JS da IA -->
+                <iframe id="preview-frame"></iframe>
+            </div>
+
+        </section>
+
+    </main> 
+    <!-- Carrega as configurações (chave) primeiro -->
+    <script src="config.js"></script>
+    <!-- Carrega a lógica principal em seguida -->
+    <script src="script.js"></script>
+</body>
+</html>
